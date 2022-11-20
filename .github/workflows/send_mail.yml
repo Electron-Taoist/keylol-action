@@ -11,9 +11,8 @@ jobs:
         uses: yuyinws/keylol-action@v1.1
         with:
           urls: 
-            f335-1
-            forum.php?mod=forumdisplay&fid=248&orderby=lastpost&filter=dateline&dateline=604800
-            f271-1
+            forum.php?mod=forumdisplay&fid=319&filter=author&orderby=dateline&dateline=86400
+            forum.php?mod=forumdisplay&fid=251&filter=author&orderby=dateline
           limit: 10
 
       - name: Send mail
@@ -25,8 +24,8 @@ jobs:
           server_port: 465
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
-          subject: Keylol帖子订阅邮件测试01
+          subject: Keylol帖子订阅邮件
           html_body: file://context.html
           to: ${{ secrets.TARGET_MAIL }}
-          from: ygxdgy
+          from: yuyinws
           convert_markdown: true
