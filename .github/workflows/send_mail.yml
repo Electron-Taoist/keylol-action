@@ -29,5 +29,5 @@ jobs:
           subject: Keylol帖子订阅邮件
           html_body: file://context.html
           to: ${{ secrets.TARGET_MAIL }}
-          from: yuyinws
+          from: 龙心爱你呦（づ￣3￣）づ╭❤～
           convert_markdown: true
