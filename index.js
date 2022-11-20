@@ -30,7 +30,7 @@ const main = async () => {
       }
       const topicHtml = `<h3 style="color:#67bbea">${topic}</h3>`
       let table = `<tr style="text-align:left;color:gray">
-          <th>帖子主题 | 查看数 | 回复数</th>
+          <th>*********帖子主题 ****** | ****** 查看数*****  | ********** 回复数</th>
         </tr>`
       $('.bm_c')
         .eq(1)
