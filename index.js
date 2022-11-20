@@ -47,11 +47,11 @@ const main = async () => {
                 // 帖子名称
                 const tName = $(ele).find('th a').text()
                 // 帖子查看数
-                const tView = $(ele).find('.num em').text()
+                const tView = $(ele).find('.by by-author em').text()
                 // 帖子链接
                 const tLink = $(ele).find('.num a').attr('href')
                 // 帖子回复数
-                const tPost = $(ele).find('.num a').text()
+                const tPost = $(ele).find('.by by-author a').text()
 
                 const tHTML = `<tr style="margin-top:10px">
                     <td style="width:1500px;position: relative">
