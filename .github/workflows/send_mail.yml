@@ -1,7 +1,7 @@
 name: keylol action
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "* * * * *"
 
 jobs:
   build:
@@ -11,10 +11,8 @@ jobs:
         uses: yuyinws/keylol-action@v1.1
         with:
           urls: 
-            forum.php?mod=forumdisplay&fid=319&filter=author&orderby=dateline&dateline=86400
-            forum.php?mod=forumdisplay&fid=251&filter=author&orderby=dateline
-            forum.php?mod=forumdisplay&fid=161&filter=author&orderby=dateline
-            forum.php?mod=forumdisplay&fid=271&filter=author&orderby=dateline
+            forum.php?mod=forumdisplay&fid=251&filter=typeid&typeid=765&orderby=dateline
+            forum.php?mod=forumdisplay&fid=161&filter=typeid&typeid=458&orderby=dateline
           limit: 10
 
       - name: Send mail
@@ -26,7 +24,7 @@ jobs:
           server_port: 465
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
-          subject: Keylol帖子订阅邮件
+          subject: 龙心爱你呦（づ￣3￣）づ╭❤～
           html_body: file://context.html
           to: ${{ secrets.TARGET_MAIL }}
           from: 龙心爱你呦（づ￣3￣）づ╭❤～
