@@ -18,7 +18,7 @@ jobs:
           limit: 10
 
       - name: Send mail
-        uses: dawidd6/action-send-mail@v3.6.0
+        uses: dawidd6/action-send-mail@v3.7.1
         with:
           # smtp 服务器地址
           server_address: smtp.qq.com
