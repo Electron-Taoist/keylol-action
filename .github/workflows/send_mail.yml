@@ -2,6 +2,7 @@ name: keylol action
 on:
   schedule:
     - cron: "0 22 * * *"
+  
 
 jobs:
   build:
@@ -33,3 +34,4 @@ jobs:
           to: ${{ secrets.TARGET_MAIL }}
           from: 龙心爱你呦（づ￣3￣）づ╭❤～
           convert_markdown: true
+
